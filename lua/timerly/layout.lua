@@ -21,10 +21,10 @@ local line = function(id, direction)
   local icon = direction == "up" and { "┌", "┐" } or { "└", "┘" }
 
   return {
-    col_start =2,
+    col_start = 2,
     lines = function()
       return {
-        { { icon[1] .. string.rep("─", state.w_with_pad ) .. icon[2], "commentfg" } },
+        { { icon[1] .. string.rep("─", state.w_with_pad) .. icon[2], "commentfg" } },
       }
     end,
     name = id,
@@ -38,7 +38,7 @@ return {
   {
     lines = ui.modes,
     name = "modes",
-    col_start=2
+    col_start = 2,
   },
 
   line "line2",

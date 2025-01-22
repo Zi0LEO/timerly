@@ -59,7 +59,7 @@ M.open = function()
   require "timerly.actions"()
 
   vim.api.nvim_create_autocmd("VimResized", {
-    group = vim.api.nvim_create_augroup("TimerlyResize",{}),
+    group = vim.api.nvim_create_augroup("TimerlyResize", {}),
     callback = function()
       if state.visible then
         require("timerly").toggle()
